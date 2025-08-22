@@ -296,3 +296,14 @@ pair<vector<vector<double>>, vector<vector<vector<double>>>> Network::backprop(c
     }
     return make_pair(nabla_b, nabla_w);
 }
+
+// cost derivative
+vector<double> Network::cost_derivative(const vector<double> &output, const vector<double> &y)
+{
+    vector<double> result(output.size(), 0.0);
+    for (int i = 0; i < output.size(); i++)
+    {
+        result[i] = output[i] - y[i];
+    }
+    return result;
+}

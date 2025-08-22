@@ -36,6 +36,9 @@ private:
     // calculates the sigmoid vector
     vector<double> sigmoid_vec(const vector<double> &z);
 
+    // cost derivative
+    vector<double> cost_derivative(const vector<double> &output, const vector<double> &y);
+
     void update_mini_batch(const vector<pair<vector<double>, vector<double>>> &mini_batch, double eta);
 
     // Back Propagation Function

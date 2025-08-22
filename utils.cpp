@@ -47,15 +47,6 @@ vector<vector<double>> outer(const vector<double> &a, const vector<double> &b)
     return result;
 }
 
-// cost derivative
-vector<double> cost_derivative(const vector<double> &output, const vector<double> &y)
-{
-    vector<double> result(output.size(), 0.0);
-    for (int i = 0; i < output.size(); i++)
-    {
-        result[i] = output[i] - y[i];
-    }
-    return result;
-}
+
 
 
