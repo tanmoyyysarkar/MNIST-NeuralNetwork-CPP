@@ -3,7 +3,7 @@
 *.gz
 
 # Ignore entire data folder
-data/
+Data/
 
 # Ignore temporary files
 *.out
