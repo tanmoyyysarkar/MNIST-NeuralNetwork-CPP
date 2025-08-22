@@ -1,0 +1,15 @@
+# Ignore dataset files
+*.idx
+*.gz
+
+# Ignore entire data folder
+data/
+
+# Ignore temporary files
+*.out
+*.exe
+*.log
+
+# Ignore build system files
+/build/
+*.o
