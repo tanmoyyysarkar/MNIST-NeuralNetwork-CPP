@@ -11,19 +11,19 @@ int main()
     try
     {
         // Load MNIST IDX files
-        auto train_images = load_images("train-images.idx3-ubyte");
-        auto train_labels_raw = load_labels("train-labels.idx1-ubyte");
-        auto test_images = load_images("t10k-images.idx3-ubyte");
-        auto test_labels_raw = load_labels("t10k-labels.idx1-ubyte");
+        auto train_images = load_images("Data/train-images.idx3-ubyte");
+        auto train_labels_raw = load_labels("Data/train-labels.idx1-ubyte");
+        auto test_images = load_images("Data/t10k-images.idx3-ubyte");
+        auto test_labels_raw = load_labels("Data/t10k-labels.idx1-ubyte");
 
         // Convert labels to one-hot vectors
         vector<vector<double>> train_labels;
         for (int l : train_labels_raw)
-            train_labels.push_back(one_hot(l));
+            train_labels.push_back(one_hot(l, 10));
 
         vector<vector<double>> test_labels;
         for (int l : test_labels_raw)
-            test_labels.push_back(one_hot(l));
+            test_labels.push_back(one_hot(l, 10));
 
         // Optional: use smaller subset for faster testing
         int n_train = 10000;
@@ -45,7 +45,7 @@ int main()
             test_data.push_back({test_x[i], test_y[i]});
 
         // Building and training the network
-        Network net({784, 128, 64, 10});                // input, { hidden }, output
+        Network net({784, 30, 10});                // input, { hidden }, output
         net.SGD(training_data, 30, 3, 3.0, test_data); // {epochs = 30, batch = 3, eta=3.0}
 
         // Evaluate on full test set

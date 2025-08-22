@@ -22,11 +22,6 @@ public:
     vector<double> feedforward(const vector<double> &input);
 
 private:
-    // cost derivative
-    vector<double> cost_derivative(const vector<double> &output, const vector<double> &y);
-
-    vector<double> sigmoid_vec(const vector<double> &z);
-
     // sigmoid function
     double sigmoid(double z);
 

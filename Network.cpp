@@ -44,7 +44,7 @@ Network::Network(vector<int> sizes)
     }
 }
 
-void Network::SGD(vector<pair<vector<double>, vector<double>>> training_data, int epochs, int mini_batch_size, double eta, vector<pair<vector<double>, vector<double>>> test_data = {})
+void Network::SGD(vector<pair<vector<double>, vector<double>>> training_data, int epochs, int mini_batch_size, double eta, vector<pair<vector<double>, vector<double>>> test_data)
 {
     int n = training_data.size();
     int n_test = test_data.size();
