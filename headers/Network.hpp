@@ -16,19 +16,6 @@ public:
 
     void SGD(vector<pair<vector<double>, vector<double>>> training_data, int epochs, int mini_batch_size, double eta, vector<pair<vector<double>, vector<double>>> test_data = {});
 
-    // sigmoid function
-    double sigmoid(double z)
-    {
-        return 1.0 / (1.0 + exp(-z));
-    }
-
-    // derivative of sigmoid function
-    double sigmoid_prime(double z)
-    {
-        double s = sigmoid(z);
-        return s * (1 - s);
-    }
-
 private:
     // dot product of matrix(M x N) x vector (N) -> vector (M)
     vector<double> dot(const vector<vector<double>> &mat, const vector<double> &vec);
