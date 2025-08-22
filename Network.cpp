@@ -3,8 +3,8 @@
 #include <random>
 #include <algorithm>
 #include <cmath>
-#include <headers/Network.hpp>
-#include <headers/utils.hpp>
+#include "headers/Network.hpp"
+#include "headers/utils.hpp"
 
 using namespace std;
 
