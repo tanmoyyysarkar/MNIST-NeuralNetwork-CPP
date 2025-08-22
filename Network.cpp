@@ -138,6 +138,17 @@ vector<double> Network::feedforward(const vector<double> &input)
     return a;
 }
 
+//calculates the sigmoid vector
+vector<double> Network::sigmoid_vec(const vector<double> &z)
+{
+    vector<double> result(z.size());
+    for (int i = 0; i < z.size(); i++)
+    {
+        result[i] = sigmoid(z[i]);
+    }
+    return result;
+}
+
 void Network::update_mini_batch(const vector<pair<vector<double>, vector<double>>> &mini_batch, double eta)
 {
     // initializing the gradients

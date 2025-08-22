@@ -33,6 +33,9 @@ private:
 
     vector<double> feedforward(const vector<double> &input);
 
+    // calculates the sigmoid vector
+    vector<double> sigmoid_vec(const vector<double> &z);
+
     void update_mini_batch(const vector<pair<vector<double>, vector<double>>> &mini_batch, double eta);
 
     // Back Propagation Function

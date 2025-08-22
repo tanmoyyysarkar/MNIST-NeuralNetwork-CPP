@@ -10,9 +10,6 @@ double sigmoid(double z);
 // derivative of sigmoid function
 double sigmoid_prime(double z);
 
-//calculates the sigmoid vector
-vector<double> sigmoid_vec(const vector<double> &z);
-
 // dot product of matrix(M x N) x vector (N) -> vector (M)
 vector<double> dot(const vector<vector<double>> &mat, const vector<double> &vec);
 

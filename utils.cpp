@@ -18,16 +18,6 @@ double sigmoid_prime(double z)
     return s * (1 - s);
 }
 
-//calculates the sigmoid vector
-vector<double> sigmoid_vec(const vector<double> &z)
-{
-    vector<double> result(z.size());
-    for (int i = 0; i < z.size(); i++)
-    {
-        result[i] = sigmoid(z[i]);
-    }
-    return result;
-}
 
 // dot product of matrix(M x N) x vector (N) -> vector (M)
 vector<double> dot(const vector<vector<double>> &mat, const vector<double> &vec)
