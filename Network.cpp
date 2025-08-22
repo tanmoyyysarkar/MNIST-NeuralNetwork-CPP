@@ -138,6 +138,19 @@ vector<double> Network::feedforward(const vector<double> &input)
     return a;
 }
 
+// sigmoid function
+double Network::sigmoid(double z)
+{
+    return 1.0 / (1.0 + exp(-z));
+}
+
+// derivative of sigmoid function
+double Network::sigmoid_prime(double z)
+{
+    double s = sigmoid(z);
+    return s * (1 - s);
+}
+
 //calculates the sigmoid vector
 vector<double> Network::sigmoid_vec(const vector<double> &z)
 {

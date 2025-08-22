@@ -18,15 +18,20 @@ public:
 
     // Evaluate function
     int evaluate(const vector<pair<vector<double>, vector<double>>> &test_data);
-    
+
     vector<double> feedforward(const vector<double> &input);
+
 private:
     // cost derivative
     vector<double> cost_derivative(const vector<double> &output, const vector<double> &y);
 
-
     vector<double> sigmoid_vec(const vector<double> &z);
 
+    // sigmoid function
+    double sigmoid(double z);
+
+    // derivative of sigmoid function
+    double sigmoid_prime(double z);
 
     // calculates the sigmoid vector
     vector<double> sigmoid_vec(const vector<double> &z);

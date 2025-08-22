@@ -5,18 +5,7 @@
 
 using namespace std;
 
-// sigmoid function
-double sigmoid(double z)
-{
-    return 1.0 / (1.0 + exp(-z));
-}
 
-// derivative of sigmoid function
-double sigmoid_prime(double z)
-{
-    double s = sigmoid(z);
-    return s * (1 - s);
-}
 
 
 // dot product of matrix(M x N) x vector (N) -> vector (M)
