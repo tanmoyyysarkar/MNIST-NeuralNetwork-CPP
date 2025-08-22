@@ -16,16 +16,17 @@ public:
 
     void SGD(vector<pair<vector<double>, vector<double>>> training_data, int epochs, int mini_batch_size, double eta, vector<pair<vector<double>, vector<double>>> test_data = {});
 
+    // Evaluate function
+    int evaluate(const vector<pair<vector<double>, vector<double>>> &test_data);
+    
+    vector<double> feedforward(const vector<double> &input);
 private:
     // cost derivative
     vector<double> cost_derivative(const vector<double> &output, const vector<double> &y);
 
-    // Evaluate function
-    int evaluate(const vector<pair<vector<double>, vector<double>>> &test_data);
 
     vector<double> sigmoid_vec(const vector<double> &z);
 
-    vector<double> feedforward(const vector<double> &input);
 
     // calculates the sigmoid vector
     vector<double> sigmoid_vec(const vector<double> &z);
